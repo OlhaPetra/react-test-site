@@ -1,11 +1,27 @@
 import React, { Component } from "react";
+import { Container, Form, Button } from "react-bootstrap";
 
 export default class ContactsPage extends Component {
   render() {
     return (
-      <>
-        <h1>Contacts</h1>
-      </>
+      <Container style={{width:"500px"}}>
+        <h1 className="text-center mt-5">Contact us</h1>
+        <Form>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control type="email" placeholder="Enter email"/>
+            <Form.Text>We'll never share your email with anyone else</Form.Text>
+          </Form.Group>
+        </Form>
+        <Form.Group controlId="formBasicPassword">
+            <Form.Label>Example textarea</Form.Label>
+            <Form.Control as="textarea" rows="3"/>
+          </Form.Group>
+          <Form.Group controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out "/>
+          </Form.Group>
+          <Button variant="primary" type="submit">Submit</Button>
+      </Container>
     );
   }
 }
